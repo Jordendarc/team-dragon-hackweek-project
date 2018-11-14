@@ -1,3 +1,4 @@
+<?php include('server.php') ?>
 <!Doctype html>
 <html>
 <head>
@@ -36,35 +37,38 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container" action="server.php">
     <div class="row login">
         <div class="col s12 14 offset-14 center-alignment">
-            <div class="card">
-                <div class="card-action red white-text">
-                    <h3>Login Form</h3>
-                </div>
-                
-                <div class="card-content">
-                    
-                    <div class="form-field">
-                        <label for ="username">Username</label>
-                        <input type="text" id="username">
-                    </div><br>
-                    
-                    
-                    <div class="form-field">
-                        <label for ="password">Password</label>
-                        <input type="password" id="password">
-                    </div><br>
-                    
-                    <div class="form-field center-alignment">
-                        <button class="btn-large red">Login</button>
+            <form class="form" action="form.php" method="post">
+                <?php include('errors.php'); ?>
+                <div class="card">
+                    <div class="card-action red white-text">
+                        <h3>Login Form</h3>
                     </div>
                     
+                    <div class="card-content">
+                        
+                        <div class="form-field">
+                            <label for ="email">Email</label>
+                            <input type="text" name ="email" id="email">
+                        </div><br>
+                        
+                        
+                        <div class="form-field">
+                            <label for ="password">Password</label>
+                            <input type="password" id="password">
+                        </div><br>
+                        
+                        <div class="form-field center-alignment">
+                            <buttontype="submit" name="login_user" class="btn-large red">Login</button>
+                        </div>
+                        
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
-    
+            
     </div>
     </div>
 </body>
